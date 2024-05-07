@@ -13,7 +13,7 @@ class Car:
         self.color = color
         self.brand = brand
         self.is_engine_on = False
-
+        self.odomiter = 0
     def start_engine(self):
         self.is_engine_on = True
         print(f"The engine of the {self.color} {self.brand} is now on.")
@@ -29,17 +29,18 @@ class Car:
 
 
 # Create two Car objects. One should be a red Toyota and the other a blue Ford.
-
-
+toyota = Car("red", "toyota")
+ford = Car("blue", "ford")
 
 # Start the engine of the red Toyota.
-
+toyota.start_engine()
 
 
 # Create a method called "drive" that takes a distance as a parameter.
 # The car can only be driven if the engine is on.
-
-
+drive_distance = input("how far do you want to drive? ")
+if toyota.is_engine_on:
+    self.odomiter += drive_distance
 
 # Attempt to drive both cars 100Km.
 
