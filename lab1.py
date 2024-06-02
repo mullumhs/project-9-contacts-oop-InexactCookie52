@@ -38,14 +38,17 @@ toyota.start_engine()
 
 # Create a method called "drive" that takes a distance as a parameter.
 # The car can only be driven if the engine is on.
-drive_distance = input("how far do you want to drive? ")
+drive_distance = int(input("how far do you want to drive? "))
 if toyota.is_engine_on:
-    self.odomiter += drive_distance
+    toyota.odomiter += drive_distance
 
 # Attempt to drive both cars 100Km.
-
-
+drive_distance2 = int(input("how far do you want to drive car 2? "))
+if ford.is_engine_on:
+    ford.odomiter += drive_distance2
+else:
+    print("Car is off")
 
 # Print the brand, odometer and colour of both cars.
-
-
+print(toyota.brand, toyota.color, toyota.odomiter)
+print(ford.brand, ford.color, ford.odomiter)
